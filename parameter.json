@@ -1,0 +1,26 @@
+{
+	# model setting
+    #"embedding_type" : "char",  # char or word
+	"emb_dim" : 256,
+	"n_classes" : 1999,
+    "question_type" : "title", # title or description
+	"model_type" : "baseline", # only "baseline", "lstm", "gru", "rnn", "cnn", are supported
+	"batch_size" : 200,
+
+	# rnn parameters
+    "max_qlen" : 55, # max question lengths, clip or padding
+	"rnn_hidden_size" : 300,
+	"rnn_hidden_layers" : 3,
+
+	# mlp parameters
+	"mlp_hidden_size" : 1024,
+	#"mlp_dropout" : 0.3,	# drop rate, 0 mean no dropout, 1 means drop all
+
+	# training parameters
+	"max_epoch" : 100,
+    "mode" : "train",	# 'train', 'val'
+    "split_rate" : 0.9,
+    "gpu" : true,
+    "learning_rate" : 1e-3,
+    "nothing": "_"	# useless
+}
